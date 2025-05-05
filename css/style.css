@@ -1,41 +1,48 @@
-*, *::after, **::before {
+*,
+*::after,
+**::before {
     box-sizing: border-box;
 }
 
 .info {
-text-align: center;    
+    text-align: center;
 }
 
 body {
     background-color: #f8f9fa;
-  font-family: Poppins,; 
-  margin: 0; 
-  padding: 0px; 
+    font-family: Poppins, ;
+    margin: 0;
+    padding: 40px;
 }
 
 .card {
     transition: transform 0.3s ease-in-out;
     height: 100%;
 }
+
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 .card-header {
     font-weight: bold;
     text-align: center;
     font-size: 1.5rem;
 }
+
 .price {
     font-size: 2rem;
     font-weight: bold;
     color: #007bff;
 }
+
 .badge-feature {
     background-color: #28a745;
     color: white;
     margin-right: 5px;
 }
+
 .hero-section {
     background-image: url('/api/placeholder/1200/400');
     background-size: cover;
@@ -45,22 +52,26 @@ body {
     margin-bottom: 30px;
     position: relative;
 }
+
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
 .hero-content {
     position: relative;
     z-index: 1;
 }
+
 .feature-icon {
     margin-right: 8px;
     color: #007bff;
 }
+
 .best-value {
     position: absolute;
     top: -15px;
@@ -100,39 +111,136 @@ body {
 }
 
 .logo {
-  width: 100px; 
-  height: auto; 
+    width: 100px;
+    height: auto;
 }
 
 .flags {
-  width: 20px; 
-  height: auto; 
+    width: 20px;
+    height: auto;
 }
 
 
 /* Iframe */
 #AgenceMaps {
-  width: 100%; 
-  height: 500px; 
-  border: none; 
-  margin-top: 20px; 
+    width: 100%;
+    height: 500px;
+    border: none;
+    margin-top: 20px;
 }
 
+/* Carousel */
+.carousel-item>.row {
+    display: flex;
+}
 
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+}
 
 /* Footer */
 
 /* Style général pour les icônes sociales */
 .social-icon {
-    width: 40px; 
-    height: 40px; 
-    margin: 0 10px; 
-    border-radius: 50%; 
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border-radius: 50%;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 /* Effet au survol des icônes */
 .social-icon:hover {
-    transform: scale(1.1); /* Agrandir l'icône au survol */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de profondeur */
+    transform: scale(1.1);
+    /* Agrandir l'icône au survol */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Ombre pour un effet de profondeur */
+}
+
+/* nolan 3 liens */
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00796b;
+}
+
+.partner-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.partner-card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.partner-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.partner-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.partner-card h3 {
+    margin: 15px 0 10px;
+    color: #004d40;
+    font-size: 1.4rem;
+}
+
+.partner-card a {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #26a69a;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.partner-card a:hover {
+    background-color: #00796b;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .dropdown-menu,
+body.dark-mode .container,
+body.dark-mode .alert {
+    background-color: #1f1f1f !important;
+    color: #fff;
+}
+
+/* Triche pour iframe */
+body.dark-mode iframe {
+    filter: invert(90%) hue-rotate(180deg);
+}
+
+@media screen and (max-width: 768px) {
+    .partner-container {
+        flex-direction: column;
+        align-items: center;
+    }    
 }

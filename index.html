@@ -4,22 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <style>
-        .carousel-item>.row {
-            display: flex;
-        }
-
-        .carousel-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 50px;
-        }
-    </style>
-
     <title>Index - TravelTheWorld</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -135,6 +123,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
+
+                    <li class="nav-item">
+                        <!-- Dark mode -->
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="toggle-dark">
+                            <label class="form-check-label" for="toggle-dark">Mode sombre</label>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -248,6 +244,7 @@
         </div>
     </div>
 
+    <!-- Map -->
     <div class="container mt-5">
         <div class="container">
             <div class="row mb-4">
@@ -295,7 +292,6 @@
 
     <div class="container mt-5">
         <h3 class="text-center">L'Agence</h3>
-
         <iframe id="AgenceMaps"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2755.3899902985245!2d-0.4622208233392574!3d46.32195107580082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480731cd187d1b89%3A0xde868d1d1c3f9856!2s10%20Rue%20Rabelais%2C%2079000%20Niort!5e0!3m2!1sfr!2sfr!4v1746437565932!5m2!1sfr!2sfr"
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -304,7 +300,61 @@
     </div>
 
     <div class="container mt-5">
-        <h3>Formulaire de reservation</h3>
+        <!-- Réservation formulaire -->
+        <div class="container mt-5">
+            <h2 class="mb-4">Formulaire de Réservation</h2>
+            <form>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="nom" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="nom" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="prenom" class="form-label">Prénom</label>
+                        <input type="text" class="form-control" id="prenom" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="destination" class="form-label">Destination souhaitée</label>
+                    <input type="text" class="form-control" id="destination" required>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="dateDebut" class="form-label">Date de départ</label>
+                        <input type="date" class="form-control" id="dateDebut" required>
+                    </div>
+                    <div class="col">
+                        <label for="dateFin" class="form-label">Date de retour</label>
+                        <input type="date" class="form-control" id="dateFin" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="formule" class="form-label">Formule souhaitée</label>
+                    <select class="form-select" id="formule" required>
+                        <option value="">-- Choisir --</option>
+                        <option value="all_inclusive">Standard</option>
+                        <option value="demi_pension">Premium</option>
+                        <option value="libre">Excellence</option>
+                    </select>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="adultes" class="form-label">Nombre d'adultes</label>
+                        <input type="number" class="form-control" id="adultes" min="1" required>
+                    </div>
+                    <div class="col">
+                        <label for="enfants" class="form-label">Nombre d'enfants (-14 ans)</label>
+                        <input type="number" class="form-control" id="enfants" min="0">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Réserver</button>
+            </form>
+        </div>
     </div>
 
     <div class="container mt-5">
@@ -394,22 +444,19 @@
                 <div class="carousel-item active">
                     <div class="row">
                         <div class="col-4">
-                            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.eic-canada.ca%2Ffr%2Fd%25C3%25A9couvrez-canada-un-m%25C3%25A9lange-entre-nature-et-modernit%25C3%25A9&psig=AOvVaw1Mq9YDAh2_WBzN5IHeFyEz&ust=1746520864822000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCNC48K_3i40DFQAAAAAdAAAAABAT"
-                                class="d-block w-100" alt="1">
+                            <img src="assets/carousel/Que-faire-Quebec-vignette.jpg" class="d-block w-100" alt="1">
                             <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
                                 <h5>Canada</h5>
                             </div>
                         </div>
                         <div class="col-4">
-                            <img src="https://www.google.com/imgres?q=borabora&imgurl=https%3A%2F%2Ftahititourisme.pf%2Fapp%2Fuploads%2Ftahiti%2F2021%2F10%2Fthumbs%2Fvue-aerienne-lagon-bora-bora-tahititourisme-stephane-mailion-photography-1920x960.jpg&imgrefurl=https%3A%2F%2Ftahititourisme.pf%2Files-et-archipels%2Files-de-la-societe%2Fbora-bora%2F&docid=RNitwoDIkQr52M&tbnid=j65UjLOT3YW0NM&vet=12ahUKEwjl0Y3_hoyNAxW1VqQEHTGPK9kQM3oECGkQAA..i&w=1920&h=960&hcb=2&ved=2ahUKEwjl0Y3_hoyNAxW1VqQEHTGPK9kQM3oECGkQAA"
-                                class="d-block w-100" alt="2">
+                            <img src="assets/carousel/Bora-bora_Libre_de_droit_1-min.jpg" class="d-block w-100" alt="2">
                             <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
                                 <h5>bora-bora</h5>
                             </div>
                         </div>
                         <div class="col-4">
-                            <img src="https://www.google.com/imgres?q=hawaii&imgurl=https%3A%2F%2Fwww.voyageursdumonde.fr%2Fvoyage-sur-mesure%2Fimg%2Fmag%2F201602%2Fmontagne-a-hawaii.jpg&imgrefurl=https%3A%2F%2Fwww.voyageursdumonde.fr%2Fvoyage-sur-mesure%2Fmagazine-voyage%2Fhawaii-d-ile-en-ile&docid=htfLcAQC3WaVwM&tbnid=BVzqMgJkNxvbEM&vet=12ahUKEwj4rLePh4yNAxW8UqQEHb27E8EQM3oECBwQAA..i&w=1012&h=675&hcb=2&ved=2ahUKEwj4rLePh4yNAxW8UqQEHb27E8EQM3oECBwQAA"
-                                class="d-block w-100" alt="3">
+                            <img src="assets/carousel/1571.jpg" class="d-block w-100" alt="3">
                         </div>
                         <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
                             <h5>inde</h5>
@@ -419,22 +466,19 @@
                 <div class="carousel-item">
                     <div class="row">
                         <div class="col-4">
-                            <img src="https://www.google.com/imgres?q=inde&imgurl=https%3A%2F%2Fwww.terdav.com%2FContent%2Fimg%2Fmag%2Fvignettes%2Fgrande%2F1571.jpg&imgrefurl=https%3A%2F%2Fwww.terdav.com%2Fmagazine-voyage%2Fles-plus-beaux-paysages-inde&docid=Ry-C4Zuj7_ywkM&tbnid=hoFmTITpmUT8YM&vet=12ahUKEwjT4vuYh4yNAxXzVKQEHU5COYoQM3oECC4QAA..i&w=1200&h=761&hcb=2&ved=2ahUKEwjT4vuYh4yNAxXzVKQEHU5COYoQM3oECC4QAA"
-                                class="d-block w-100" alt="4">
+                            <img src="assets/carousel/Que-faire-Quebec-vignette.jpg" class="d-block w-100" alt="4">
                             <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
                                 <h5>Canada</h5>
                             </div>
                         </div>
                         <div class="col-4">
-                            <img src="https://www.google.com/imgres?q=tahiti&imgurl=https%3A%2F%2Flespetitsvoyages.fr%2Fwp-content%2Fuploads%2F2018%2F01%2Fpolynesia-3021072_960_720.jpg&imgrefurl=https%3A%2F%2Flespetitsvoyages.fr%2Fcarte-postale-de-tahiti&docid=R4-jJU7hJE2PBM&tbnid=Eerz0SSsdZ6yCM&vet=12ahUKEwj5kuenh4yNAxX4TaQEHQAeMWkQM3oECFQQAA..i&w=960&h=637&hcb=2&ved=2ahUKEwj5kuenh4yNAxX4TaQEHQAeMWkQM3oECFQQAA"
-                                class="d-block w-100" alt="5">
+                            <img src="assets/carousel/montagne-a-hawaii.jpg" class="d-block w-100" alt="5">
                             <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
                                 <h5>Tahiti</h5>
                             </div>
                         </div>
                         <div class="col-4">
-                            <img src="https://www.google.com/imgres?q=mexico&imgurl=https%3A%2F%2Fwww.mexique-voyages.com%2Fwp-content%2Fuploads%2Fmexico-city-1280x800.jpeg&imgrefurl=https%3A%2F%2Fwww.mexique-voyages.com%2Fmexico&docid=K15kqEWX6I3j7M&tbnid=v3fLY-nc4sF-CM&vet=12ahUKEwjxnabJh4yNAxUHe6QEHU3YIxEQM3oECDkQAA..i&w=1280&h=800&hcb=2&ved=2ahUKEwjxnabJh4yNAxUHe6QEHU3YIxEQM3oECDkQAA"
-                                class="d-block w-100" alt="6">
+                            <img src="assets/carousel/telechargement.jpeg" class="d-block w-100" alt="6">
                             <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
                                 <h5>Mexico</h5>
                             </div>
@@ -515,7 +559,58 @@
 
     </div>
 
-    
+    <div class="container mt-5 d-flex justify-content-center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/EuELhcy0BZQ?si=3K-MldXAknQB3cpo"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <h2>Nos partenaires voyage</h2>
+
+    <div class="partner-container">
+        <div class="partner-card">
+            <img src="assets/carousel/voyageurs-du-monde-logo-vector-removebg-preview.png" alt="Voyageurs du Monde">
+            <h3>Voyageurs du Monde</h3>
+            <a href="https://www.voyageursdumonde.fr/" target="_blank">Visiter le site</a>
+        </div>
+
+        <div class="partner-card">
+            <img src="assets/carousel/480269-5351226-removebg-preview.png" alt="TUI">
+            <h3>TUI France</h3>
+            <a href="https://www.tui.fr/" target="_blank">Visiter le site</a>
+        </div>
+
+        <div class="partner-card">
+            <img src="assets/carousel/arton18611-removebg-preview.png" alt="Evaneos">
+            <h3>Evaneos</h3>
+            <a href="https://www.evaneos.fr/" target="_blank">Visiter le site</a>
+        </div>
+    </div>
+
+    <!-- Modal cookies pref -->
+    <!-- Modal Cookies Bootstrap -->
+    <div class="modal fade" id="cookiesModal" tabindex="-1" aria-labelledby="cookiesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cookiesModalLabel">Gestion des cookies</h5>
+                </div>
+
+                <div class="modal-body">
+                    <p>Ce site utilise des cookies pour améliorer votre expérience. Vous ne pouvez pas personnaliser vos
+                        préférences.</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="nopCookies">Refuser</button>
+                    <button type="button" class="btn btn-primary" id="yepCookies">Accepter</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <footer class="text-center mt-5">
         <p>&copy; 2025 Agence TravelTheWorld. Tous droits réservés.</p>
@@ -530,8 +625,14 @@
     </footer>
 
     <!-- Scripts Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+        integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+        crossorigin="anonymous"></script>
+    <script src="js/darkMode.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 
 </html>
