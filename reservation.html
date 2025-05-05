@@ -1,0 +1,56 @@
+
+<!-- Réservation formulaire -->
+<div class="container mt-5">
+    <h2 class="mb-4">Formulaire de Réservation</h2>
+    <form>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="nom" class="form-label">Nom</label>
+          <input type="text" class="form-control" id="nom" required>
+        </div>
+        <div class="col-md-6">
+          <label for="prenom" class="form-label">Prénom</label>
+          <input type="text" class="form-control" id="prenom" required>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="destination" class="form-label">Destination souhaitée</label>
+        <input type="text" class="form-control" id="destination" required>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="dateDebut" class="form-label">Date de départ</label>
+          <input type="date" class="form-control" id="dateDebut" required>
+        </div>
+        <div class="col">
+          <label for="dateFin" class="form-label">Date de retour</label>
+          <input type="date" class="form-control" id="dateFin" required>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="formule" class="form-label">Formule souhaitée</label>
+        <select class="form-select" id="formule" required>
+          <option value="">-- Choisir --</option>
+          <option value="all_inclusive">Standard</option>
+          <option value="demi_pension">Premium</option>
+          <option value="libre">Excellence</option>
+        </select>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label for="adultes" class="form-label">Nombre d'adultes</label>
+          <input type="number" class="form-control" id="adultes" min="1" required>
+        </div>
+        <div class="col">
+          <label for="enfants" class="form-label">Nombre d'enfants (-14 ans)</label>
+          <input type="number" class="form-control" id="enfants" min="0">
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Réserver</button>
+    </form>
+</div>
