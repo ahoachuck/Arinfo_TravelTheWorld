@@ -137,10 +137,6 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de profondeur */
 }
 
-
-
-
-
 /* nolan 3 liens */ 
 
 h2 {
@@ -206,4 +202,20 @@ h2 {
       flex-direction: column;
       align-items: center;
     }
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  body.dark-mode .navbar,
+  body.dark-mode .dropdown-menu,
+  body.dark-mode .alert {
+    background-color: #1f1f1f !important;
+    color: #fff;
+  }
+  
+  /* Triche pour iframe */
+  body.dark-mode iframe {
+    filter: invert(90%) hue-rotate(180deg);
   }
