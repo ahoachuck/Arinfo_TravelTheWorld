@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Index - TravelTheWorld</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -122,6 +123,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
+
+                    <li class="nav-item">
+                        <!-- Dark mode -->
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="toggle-dark">
+                            <label class="form-check-label" for="toggle-dark">Mode sombre</label>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -234,12 +243,6 @@
             </div>
         </div>
     </div>
-    <!-- Dark mode -->
-    <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="toggle-dark">
-        <label class="form-check-label" for="toggle-dark">Mode sombre</label>
-    </div>
-
 
     <!-- Map -->
     <div class="container mt-5">
@@ -444,29 +447,35 @@
         </div>
     </div>
 
-    
-      <h2>Nos partenaires voyage</h2>
-    
-      <div class="partner-container">
+    <div class="container mt-5 d-flex justify-content-center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/EuELhcy0BZQ?si=3K-MldXAknQB3cpo"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <h2>Nos partenaires voyage</h2>
+
+    <div class="partner-container">
         <div class="partner-card">
-          <img src="assets/carousel/voyageurs-du-monde-logo-vector-removebg-preview.png" alt="Voyageurs du Monde">
-          <h3>Voyageurs du Monde</h3>
-          <a href="https://www.voyageursdumonde.fr/" target="_blank">Visiter le site</a>
+            <img src="assets/carousel/voyageurs-du-monde-logo-vector-removebg-preview.png" alt="Voyageurs du Monde">
+            <h3>Voyageurs du Monde</h3>
+            <a href="https://www.voyageursdumonde.fr/" target="_blank">Visiter le site</a>
         </div>
-    
+
         <div class="partner-card">
-          <img src="assets/carousel/480269-5351226-removebg-preview.png" alt="TUI">
-          <h3>TUI France</h3>
-          <a href="https://www.tui.fr/" target="_blank">Visiter le site</a>
+            <img src="assets/carousel/480269-5351226-removebg-preview.png" alt="TUI">
+            <h3>TUI France</h3>
+            <a href="https://www.tui.fr/" target="_blank">Visiter le site</a>
         </div>
-    
+
         <div class="partner-card">
-          <img src="assets/carousel/arton18611-removebg-preview.png" alt="Evaneos">
-          <h3>Evaneos</h3>
-          <a href="https://www.evaneos.fr/" target="_blank">Visiter le site</a>
+            <img src="assets/carousel/arton18611-removebg-preview.png" alt="Evaneos">
+            <h3>Evaneos</h3>
+            <a href="https://www.evaneos.fr/" target="_blank">Visiter le site</a>
         </div>
-      </div>
-    
+    </div>
+
 
 
     <footer class="text-center mt-5">
@@ -482,8 +491,12 @@
     </footer>
 
     <!-- Scripts Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+        integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+        crossorigin="anonymous"></script>
     <script src="js/darkMode.js"></script>
 </body>
 
