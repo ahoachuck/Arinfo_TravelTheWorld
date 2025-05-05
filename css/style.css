@@ -159,52 +159,52 @@ body {
     /* Ombre pour un effet de profondeur */
 }
 
-/* nolan 3 liens */ 
+/* nolan 3 liens */
 
 h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 30px;
     color: #00796b;
-  }
+}
 
-  .partner-container {
+.partner-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-  }
+}
 
-  .partner-card {
+.partner-card {
     background-color: white;
     border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     width: 280px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
-  }
+}
 
-  .partner-card:hover {
+.partner-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
-  }
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
 
-  .partner-card img {
+.partner-card img {
     width: 100%;
     height: 160px;
     object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-  }
+}
 
-  .partner-card h3 {
+.partner-card h3 {
     margin: 15px 0 10px;
     color: #004d40;
     font-size: 1.4rem;
-  }
+}
 
-  .partner-card a {
+.partner-card a {
     display: inline-block;
     margin-bottom: 20px;
     padding: 10px 20px;
@@ -213,17 +213,12 @@ h2 {
     text-decoration: none;
     border-radius: 30px;
     transition: background-color 0.3s ease;
-  }
+}
 
-  .partner-card a:hover {
+.partner-card a:hover {
     background-color: #00796b;
-  }
+}
 
-  @media screen and (max-width: 768px) {
-    .partner-container {
-      flex-direction: column;
-      align-items: center;
-    }
 /* Dark Mode */
 body.dark-mode {
     background-color: #121212;
@@ -232,6 +227,7 @@ body.dark-mode {
 
 body.dark-mode .navbar,
 body.dark-mode .dropdown-menu,
+body.dark-mode .container,
 body.dark-mode .alert {
     background-color: #1f1f1f !important;
     color: #fff;
@@ -240,4 +236,11 @@ body.dark-mode .alert {
 /* Triche pour iframe */
 body.dark-mode iframe {
     filter: invert(90%) hue-rotate(180deg);
+}
+
+@media screen and (max-width: 768px) {
+    .partner-container {
+        flex-direction: column;
+        align-items: center;
+    }    
 }
