@@ -136,3 +136,74 @@ body {
     transform: scale(1.1); /* Agrandir l'icône au survol */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de profondeur */
 }
+
+
+
+
+
+/* nolan 3 liens */ 
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00796b;
+  }
+
+  .partner-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .partner-card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+
+  .partner-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+  }
+
+  .partner-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .partner-card h3 {
+    margin: 15px 0 10px;
+    color: #004d40;
+    font-size: 1.4rem;
+  }
+
+  .partner-card a {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #26a69a;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+  }
+
+  .partner-card a:hover {
+    background-color: #00796b;
+  }
+
+  @media screen and (max-width: 768px) {
+    .partner-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
