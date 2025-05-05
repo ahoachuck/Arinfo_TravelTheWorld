@@ -1,11 +1,138 @@
 *, *::after, **::before {
-
     box-sizing: border-box;
-
 }
 
 .info {
-
 text-align: center;    
+}
 
+body {
+    background-color: #f8f9fa;
+  font-family: Poppins,; 
+  margin: 0; 
+  padding: 0px; 
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.card-header {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+.badge-feature {
+    background-color: #28a745;
+    color: white;
+    margin-right: 5px;
+}
+.hero-section {
+    background-image: url('/api/placeholder/1200/400');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    margin-bottom: 30px;
+    position: relative;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+.feature-icon {
+    margin-right: 8px;
+    color: #007bff;
+}
+.best-value {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: #dc3545;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(15deg);
+}
+
+.contact-header {
+    background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+    color: white;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.contact-footer {
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+    background-color: #212529;
+    color: white;
+}
+
+.logo {
+  width: 100px; 
+  height: auto; 
+}
+
+.flags {
+  width: 20px; 
+  height: auto; 
+}
+
+
+/* Iframe */
+#AgenceMaps {
+  width: 100%; 
+  height: 500px; 
+  border: none; 
+  margin-top: 20px; 
+}
+
+
+
+/* Footer */
+
+/* Style général pour les icônes sociales */
+.social-icon {
+    width: 40px; 
+    height: 40px; 
+    margin: 0 10px; 
+    border-radius: 50%; 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Effet au survol des icônes */
+.social-icon:hover {
+    transform: scale(1.1); /* Agrandir l'icône au survol */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour un effet de profondeur */
 }
