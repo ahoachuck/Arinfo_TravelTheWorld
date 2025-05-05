@@ -1,0 +1,11 @@
+*, *::after, **::before {
+
+    box-sizing: border-box;
+
+}
+
+.info {
+
+text-align: center;    
+
+}
